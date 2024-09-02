@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Debugging Assistant</title>
+    <link rel="stylesheet" href="ai_gen_css.css">
+    <link rel="stylesheet" href="night.css">
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="landing.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="portfolio.html">PORTFOLIO</a>
+        <a href="ai_gen.html">AI GEN</a>
+        <a href="more.html">MORE</a>
+    </div>
+    <div class="container">
+        <h1>Code Debugging Assistant</h1>
+        <div class="editor-container">
+            <textarea id="codeInput" placeholder="Type your code here..."></textarea>
+            <button id="analyzeButton">Analyze Code</button>
+        </div>
+        <div class="output-container">
+            <h2>Code Issues</h2>
+            <pre id="issues"></pre>
+            <h2>Hints</h2>
+            <div id="hints">Enter some code and click "Analyze Code" to find issues and receive hints!</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

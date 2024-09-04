@@ -1,16 +1,51 @@
+.grid-container {
+  display: inline-grid;
+  column-gap: 50px;
+  row-gap: 50px;
+  min-width: 100%;
+}
+
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+
 body{
-    background-color: black;
+    background-color:black;
     color: white;
+    padding:5px
+}
+
+.header
+{
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #500000;
+  
+}
+
+.AandMIcon{
+  grid-column: 1;
+  grid-row: 1;
+  border: 1px solid #ccc;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 
 .topnav {
-    background-color: #333;
-    overflow: hidden;
+  border: 1px solid #ccc;
+    grid-column: 2;
+    grid-row: 1;
+    opacity: .8;
+    min-width: 470px;
+    float:right;
   }
   
   /* Style the links inside the navigation bar */
   .topnav a {
+
     float: left;
     color: #f2f2f2;
     text-align: center;
@@ -30,3 +65,65 @@ body{
     background-color: black;
     color: white;
   }
+
+  .title
+  {
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    padding-top: 25%;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    border: 1px solid #ccc;
+    max-width: 260px;
+    min-width: 260px;
+    border-width: 5px;
+    max-height: 260px;
+    min-height: 260px;
+    text-align: center;
+  }
+
+  #image_landing{
+    grid-column:2;
+    grid-row: 2;
+    border: 1px solid #ccc;
+  }
+
+  #summary_landing{
+    grid-column: 1;
+    grid-row: 3;
+    border: 1px solid #ccc;
+    max-width: 290px;
+    padding: 10px;
+  }
+
+  .content{
+    display: grid;
+    column-gap: 50px;
+    row-gap: 50px;
+    min-width: 100%;
+    max-width: 100%;
+
+  }
+
+  .skills{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    max-width: 50%;
+    max-height: 50%;
+  }
+  .Areas_Interest{
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+    max-width: 50%;
+    max-height: 50%;
+  }
+  .resume{
+    grid-column: 2 / span 2;
+    grid-row-start: 1 / span 2;
+    grid-row-end: 2 / span 2;
+    max-width: 50%;
+    max-height: 100%;
+  }
+  

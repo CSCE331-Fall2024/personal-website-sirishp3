@@ -1,38 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Debugging Assistant</title>
-    <link rel="stylesheet" href="ai_gen_css.css">
-    <link rel="stylesheet" href="night.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT Capabilities</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: fadeIn 2s;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      animation: fadeIn 2.5s;
+    }
+
+    nav {
+      background-color: #0056b3;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 10px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #f0f0f0;
+    }
+
+    section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 40px 20px;
+    }
+
+    .capability {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      padding: 20px;
+      margin: 15px;
+      transition: transform 0.3s;
+      animation: slideIn 1.5s;
+    }
+
+    .capability:hover {
+      transform: translateY(-10px);
+    }
+
+    .capability h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #007bff;
+    }
+
+    .capability p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    /* Bottom navigation */
+    .bottom-nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .bottom-nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .bottom-nav a:hover {
+      color: #007bff;
+    }
+
+    footer {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Add padding at the bottom to prevent content being hidden under fixed nav */
+    body {
+      padding-bottom: 80px;
+    }
+  </style>
 </head>
 <body>
-    <div class="grid-container">
-        <div class = "header">
-            <img class = "AandMIcon" src = "logo.jpeg" width = 50 height=50>
-            <div class="topnav">
-                <a href="index.html">HOME</a>
-                <a href="qualifications.html">QUALIFICATIONS</a>
-                <a href="portfolio.html">PORTFOLIO</a>
-                <a class="active" href="ai_gen.html">AI GEN</a>
-                <a href="services.html">SERVICES</a>      
-            </div>
-        </div>
-        <div class="container">
-            <h1>Code Debugging Assistant</h1>
-            <div class="editor-container">
-                <textarea id="codeInput" placeholder="Type your code here..."></textarea>
-                <button id="analyzeButton">Analyze Code</button>
-            </div>
-            <div class="output-container">
-                <h2>Code Issues</h2>
-                <pre id="issues"></pre>
-                <h2>Hints</h2>
-                <div id="hints">Enter some code and click "Analyze Code" to find issues and receive hints!</div>
-            </div>
-        </div>
-        <script src="script.js"></script>
-    </div>
+
+<header>
+  <h1>ChatGPT Capabilities</h1>
+  <p>Discover the power of conversational AI and its wide range of features!</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#natural">Natural Language</a></li>
+    <li><a href="#code">Code Generation</a></li>
+    <li><a href="#memory">Conversation Memory</a></li>
+    <li><a href="#realtime">Real-Time Information</a></li>
+    <li><a href="#learning">Learning and Adaptation</a></li>
+  </ul>
+</nav>
+
+<section>
+  <div class="capability" id="natural">
+    <h2>Natural Language Understanding</h2>
+    <p>ChatGPT excels at understanding human language, enabling it to engage in natural and intuitive conversations. It can comprehend context, tone, and intent, making interactions feel smooth and responsive.</p>
+  </div>
+
+  <div class="capability" id="code">
+    <h2>Code Generation & Debugging</h2>
+    <p>With its ability to generate and debug code across multiple programming languages, ChatGPT is a powerful tool for developers. It can write entire functions, debug existing code, and even suggest optimizations, saving you time and effort.</p>
+  </div>
+
+  <div class="capability" id="memory">
+    <h2>Conversation Memory</h2>
+    <p>By retaining context across turns in a conversation, ChatGPT can maintain continuity and build on previous interactions. This allows for long-term discussions and the ability to revisit topics without losing track of earlier points.</p>
+  </div>
+
+  <div class="capability" id="realtime">
+    <h2>Real-Time Information Access</h2>
+    <p>Thanks to its browsing capabilities, ChatGPT can retrieve real-time information, including the latest news, weather, and updates on specific subjects. This ensures responses are timely and relevant in dynamic environments.</p>
+  </div>
+
+  <div class="capability" id="learning">
+    <h2>Learning and Adaptation</h2>
+    <p>ChatGPT is capable of learning and adapting based on user feedback. It continuously improves its understanding and accuracy, offering more refined responses over time. Customization options also allow it to adjust to specific user needs or industries.</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2024 ChatGPT Capabilities | All rights reserved</p>
+</footer>
+
+<!-- Bottom navigation with links -->
+<div class="bottom-nav">
+  <a href="index.html">Index</a>
+  <a href="qualifications.html">Qualif.</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="ai_gen.html">Ai-gen</a>
+  <a href="services.html">Services</a>
+</div>
+
 </body>
 </html>

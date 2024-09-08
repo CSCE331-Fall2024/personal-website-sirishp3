@@ -1,129 +1,126 @@
-.grid-container {
-  display: inline-grid;
-  column-gap: 50px;
-  row-gap: 50px;
-  min-width: 100%;
-}
-
-:root { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  :root { font-family: 'Inter var', sans-serif; }
-}
-
 body{
-    background-color:black;
-    color: white;
-    padding:5px
+  background-image: url(image-from-rawpixel-id-10163224-jpeg.jpg);
+  background-size: cover;
 }
 
-.header
-{
-  grid-row: 1;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  background-color: #500000;
-  
+.grid_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  grid-template-rows: auto auto auto auto;   /* Four rows, auto-sized based on content */
+  gap: 20px;  /* Optional: spacing between grid items */
 }
 
-.AandMIcon{
+.logo{
   grid-column: 1;
   grid-row: 1;
-  border: 1px solid #ccc;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 50px;
+}
+
+.Motivational_Speech{
+  grid-column: 2;
+  grid-row: 1;
+  text-align: right;
+  padding-right: 100px;
+}
+
+.title_landing{
+  grid-row: 2;
+  grid-column: 1 / span 2;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.title{
+  grid-row: 2;
+  grid-column: 1 / span 2;
+}
+
+.summary_landing{
+  grid-row: 3;
+  grid-column: 1 / span 2;
+  text-align: center;
+}
+
+.content{
+  background-color: whitesmoke;
+  opacity: .85;
+}
+
+/* Resume content on the left */
+#resume{
+  grid-row: 3 / span 2;
+  grid-column: 1;
+  text-align: left;
+}
+
+/* Skills on the top right */
+#skill{
+  grid-row: 3;
+  grid-column: 2;
+  text-align: left;
+}
+
+/* Area of Interest below skills */
+#aoi{
+  grid-row: 4;
+  grid-column: 2;
+  text-align: left;
+}
+
+#projects{
+  grid-row: 3 / span 2;
+  grid-column: 1 / span 2;
+  text-align: left;
+  max-width: 90%;
 }
 
 
-.topnav {
-  border: 1px solid #ccc;
-    grid-column: 2;
-    grid-row: 1;
-    opacity: .8;
-    min-width: 470px;
-    float:right;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
+#internships{
+  grid-row: 5 / span 2;
+  grid-column: 1 / span 2;
+  text-align: left;
+}
 
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: black;
-    color: white;
-  }
+.GoToNextPage{
+  padding-top: 10%;
+}
 
-  .title
-  {
-    grid-row: 2;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    padding-top: 25%;
-    padding-left: 50px;
-    padding-right: 50px;
+.GoToNextPage a{
+  grid-row: 6;
+  grid-column: 1 / span 2;
+  text-align: left;
+  color: white;
+  padding-left: 30px;
+}
 
-    border: 1px solid #ccc;
-    max-width: 260px;
-    min-width: 260px;
-    border-width: 5px;
-    max-height: 260px;
-    min-height: 260px;
-    text-align: center;
-  }
+.navigation{
+  grid-row: 7;
+  grid-column: 1 / span 2;
+  text-align: center;
+  color: white;
+  background-color: #111;
+  opacity: 0.8;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 400px;
+}
 
-  #image_landing{
-    grid-column:2;
-    grid-row: 2;
-    border: 1px solid #ccc;
-  }
+.navigation li{
+  float: left;
+}
 
-  #summary_landing{
-    grid-column: 1;
-    grid-row: 3;
-    border: 1px solid #ccc;
-    max-width: 290px;
-    padding: 10px;
-  }
+.navigation li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-  .content{
-    display: grid;
-    column-gap: 50px;
-    row-gap: 50px;
-    min-width: 100%;
-    max-width: 100%;
+.navigation li a:hover{
+  background-color: #111;
+}
 
-  }
 
-  .skills{
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
-    max-width: 50%;
-    max-height: 50%;
-  }
-  .Areas_Interest{
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 2;
-    max-width: 50%;
-    max-height: 50%;
-  }
-  .resume{
-    grid-column: 2 / span 2;
-    grid-row-start: 1 / span 2;
-    grid-row-end: 2 / span 2;
-    max-width: 50%;
-    max-height: 100%;
-  }
-  
+
+

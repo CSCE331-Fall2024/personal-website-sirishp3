@@ -4,43 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sirish Patibanda</title>
-    <link rel="stylesheet" type="text/css" href="night.css" /> 
+    <link rel="stylesheet" href="night.css">
 </head>
 <body>
-    <div class="grid-container">
-        <div class = "header">
-            <img class = "AandMIcon" src = "logo.jpeg" width = 50 height=50>
-            <div class="topnav">
-                <a href="index.html">HOME</a>
-                <a class="active" href="qualifications.html">QUALIFICATIONS</a>
-                <a href="portfolio.html">PORTFOLIO</a>
-                <a href="ai_gen.html">AI GEN</a>
-                <a href="services.html">SERVICES</a>      
-            </div>
+    <div class="grid_container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <h1>SP.</h1>
         </div>
-        <h1 class="title">QUALIFICATIONS</h1>
-        <div class = "content">
-            <div class = "Resume">
-                <h3 class="subtitle">RESUME</h3>
+
+        <!-- Motivational Speech -->
+        <div class="Motivational_Speech">
+            <h3>Take a Break</h3>
+        </div>
+
+        <!-- Main Title -->
+        <div class="title">
+            <h2>Qualifications</h2>
+        </div>
+        <!--<div class = "content"> -->
+            <!-- Resume Section -->
+            <div id="resume">
+                <h3>Resume</h3>
                 <object data="Resume Junior Year Summer.pdf" type="application/pdf" width="100%" height="500px">
                     <p>Unable to display PDF file. <a href="Resume Junior Year Summer.pdf">Download</a> instead.</p>
                 </object>
             </div>
-            <div class = Skills>
-                <h3>SKILLS</h3>
+
+            <!-- Skills Section -->
+            <div id="skill" class = "content">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Skill 1</li>
+                    <li>Skill 2</li>
+                    <li>Skill 3</li>
+                </ul>
             </div>
-            <div class = "Areas_Interest">
-                <h3>AREAS OF INTEREST</h3>
+
+            <!-- Areas of Interest Section -->
+            <div id="aoi" class = "content">
+                <h3>Areas of Interest</h3>
+                <ul>
+                    <li>Area 1</li>
+                    <li>Area 2</li>
+                    <li>Area 3</li>
+                </ul>
             </div>
         </div>
 
-        <div class = "contact_footer">
-            <h3>281.690.0031</h3> 
-            <a href="SirishPatibanda1@gmail.com"><img src = "" width = 80px height=80px></a> 
-            <a href="https://github.com/Sirishp3"><img src = "github icon.png" width = 100px  height=100px></a> 
+            
+        <!-- Navigation Links -->
+        <div class="GoToNextPage">
+            <a href="qualifications.html">Want to see my qualifications? -></a>
         </div>
+
+        <!-- Navigation Menu -->
+        <ul class="navigation">
+            <li><a class="active" href="index.html" style="color: #ffffff;">HOME</a></li>
+            <li><a href="qualifications.html">QUALIFICATIONS</a></li>
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="ai_gen.html">AI GEN</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+        </ul>
     </div>
-
-
 </body>
 </html>

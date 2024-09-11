@@ -7,7 +7,7 @@ body{
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two equal-width columns */
   grid-template-rows: auto auto auto auto;   /* Four rows, auto-sized based on content */
-  gap: 20px;  /* Optional: spacing between grid items */
+  gap: 10px;  /* Optional: spacing between grid items */
 }
 
 .logo{
@@ -27,7 +27,7 @@ body{
   grid-row: 2;
   grid-column: 1 / span 2;
   text-align: center;
-  padding-top: 10%;
+  padding-top: 10px;
 }
 
 .title{
@@ -67,7 +67,7 @@ body{
   text-align: left;
 }
 
-#projects{
+.projects{
   grid-row: 3 / span 2;
   grid-column: 1 / span 2;
   text-align: left;
@@ -77,6 +77,12 @@ body{
 
 #internships{
   grid-row: 5 / span 2;
+  grid-column: 1 / span 2;
+  text-align: left;
+}
+
+.services{
+  grid-row: 3 / span 2;
   grid-column: 1 / span 2;
   text-align: left;
 }
@@ -102,21 +108,24 @@ body{
   opacity: 0.8;
   list-style-type: none;
   margin: 0;
-  padding-left: 400px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.navigation li{
-  float: left;
-}
-
-.navigation li a{
+.navigation a{
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
+#img_temple{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* Adjust as needed */
 
+}
 .navigation li a:hover{
   background-color: #111;
 }

@@ -38,11 +38,10 @@ function toggle()
 window.onload = function() {
     var savedStyle = localStorage.getItem('stylesheet');
     var element = document.getElementById('stylesheet');
-    if(savedStyle)
+    if(savedStyle || element)
     {
         element.setAttribute('href', savedStyle);
     }
 }
 
-load();
 
